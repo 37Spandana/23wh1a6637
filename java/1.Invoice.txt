@@ -1,0 +1,27 @@
+import java.util.*;
+class Invoice
+{
+    String part_no;
+    String part_des;
+    int quantity;
+    double price;
+    void Invoice(String part_no,String part_des,int quantity,double price)
+    {
+        this.part_no=part_no;
+        this.part_des=part_des;
+        this.quantity=quantity;
+        this.price=price;
+    }
+    void getInvoiceAmount(int quantity,double price)
+    {
+        System.out.println("Invoice amount= "+quantity*price);
+    }
+}
+class Main
+{
+    public static void main(String s[])
+    {
+        Invoice i=new Invoice();
+        i.getInvoiceAmount(5,9);
+    }
+}

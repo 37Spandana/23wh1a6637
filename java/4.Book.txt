@@ -1,0 +1,62 @@
+import java.util.*;
+class Book
+{
+    private String bname;
+    private String ISBN;
+    private String author;
+    private String publisher;
+    public Book( String bname,String ISBN,String author,String publisher)
+    {
+        this.bname = bname;
+        this.ISBN = ISBN;
+        this.author = author;
+        this.publisher=publisher;
+    }
+    void setbname(String bname)
+    {
+        this.bname = bname;
+    }
+    String getbname()
+    {
+        return bname;
+    }
+    void setISBN(String ISBN)
+    {
+        this.ISBN = ISBN;
+    }
+    String getISBN()
+    {
+        return ISBN;
+    }
+    void author(String author)
+    {
+        this.author = author;
+    }
+    String getauthor()
+    {
+        return author;
+    }
+    void setpublisher(String publisher)
+    {
+        this.publisher = publisher;
+    }
+    String getpulisher()
+    {
+        return publisher;
+    }
+    void getBookInfo()
+    {
+        System.out.println("BookName: "+bname);
+        System.out.println("ISBN no: "+ISBN);
+        System.out.println("Author: "+author);
+        System.out.println("Publisher: "+publisher);
+    }
+}
+class Main
+{
+    public static void main(String s[])
+    {
+        Book b=new Book("Harry Potter","63465298","J.K Rowling","Bloomsbury");
+        b.getBookInfo();
+    }
+}

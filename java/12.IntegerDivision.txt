@@ -1,0 +1,30 @@
+import java.util.*;
+class intdiv
+{
+    public static void main(String s[])
+    {
+        Scanner sc=new Scanner(System.in);
+        try
+        {
+            System.out.print("Enter Num1 and Num2: ");
+            String num1 = sc.next();
+            int Num1 = Integer.parseInt(num1);
+            String num2 = sc.next();
+            int Num2 = Integer.parseInt(num2);
+            if (Num2 == 0)
+            {
+                throw new ArithmeticException("");
+            }
+            int res = Num1 / Num2;
+            System.out.println("Result: " + res);
+        }
+        catch (NumberFormatException e1)
+        {
+            System.out.println("Please enter an integer.");
+        }
+        catch (ArithmeticException e2)
+        {
+            System.out.println("Cannot divide by zero");
+        }
+    }
+}

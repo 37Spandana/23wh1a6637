@@ -1,0 +1,38 @@
+import java.util.*;
+class Converter
+{
+    public static void main(String s[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter number to convert: ");
+        double n=sc.nextDouble();
+        System.out.println("1.$-Rs conversions,2.km-m conversions,3.mile-km conversions,4.hr-min conversions,5.hr-sec conversions");
+        System.out.println("enter option: ");
+        int o=sc.nextInt();
+        switch(o)
+        {
+            case 1:
+                System.out.println("$"+n+" = "+"Rs"+n*83.72);
+                System.out.println("Rs"+n+" = $"+n/83.72);
+                break;
+            case 2:
+                System.out.println(n+"km = "+n*1000+"m");
+                System.out.println(n+"m = "+n/1000+"km");
+                break;
+            case 3:
+                System.out.println(n+"mile = "+n*1.60934+"km");
+                System.out.println(n+"km = "+n/1.60934+"mile");
+                break;
+            case 4:
+                System.out.println(n+"hr = "+n*60+"min");
+                System.out.println(n+"min = "+n/60+"hr");
+                break;
+            case 5:
+                System.out.println(n+"hr = "+n*3600+"sec");
+                System.out.println(n+"sec = "+n/3600+"hr");
+                break;
+            default:
+            System.out.println("invalid option");
+        }
+    }
+}

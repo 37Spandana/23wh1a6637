@@ -1,0 +1,47 @@
+import java.util.*;
+class gen_elec_bill
+{
+    public static void main(String s[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter consumer no and name,previous and cuurent reading,connection type");
+        int cons_no=sc.nextInt();
+        String cons_name=sc.next();
+        int prev_read=sc.nextInt();
+        int current_read=sc.nextInt();
+        String EB=sc.next();
+        int units=current_read - prev_read;
+        double bill_amt=0;
+        if(EB.equals("domestic"))
+        {
+            if(units<=100)
+            {
+                bill_amt = units*1.5;
+            }
+            else if(units<=200)
+            {
+                bill_amt = 100*1.5 + (units-100)*2.5;
+            }
+            else if(units<=300)
+            {
+                bill_amt = 100*1.5 + 200*2.5 + (units-300)*3.5;
+            }
+        }
+        else if(EB.equals("commercial"))
+        {
+            if(units<=100)
+            {
+                bill_amt = units*2;
+            }
+            else if(units<=200)
+            {
+                bill_amt = 100*2 + (units-100)*3;
+            }
+            else if(units<=300)
+            {
+                bill_amt = 100*2 + 200*3 + (units-300)*4;
+            }
+        }
+        System.out.println("Bill amount= "+bill_amt);
+    }
+}

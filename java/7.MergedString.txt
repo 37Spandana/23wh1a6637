@@ -1,0 +1,28 @@
+import java.util.*;
+class Main
+{
+    public static void main(String s[])
+    {
+        int i=0,j=0;
+        Scanner sc=new Scanner(System.in);
+        String s1=sc.next();
+        String s2=sc.next();
+        StringBuilder ms=new StringBuilder();
+        while(i<s1.length() && j<s2.length())
+        {
+            ms.append(s1.charAt(i));
+            ms.append(s2.charAt(j));
+            i++;
+            j++;
+        }
+        if(i<s1.length())
+        {
+            ms.append(s1.substring(i));
+        }
+        if(j<s2.length())
+        {
+            ms.append(s2.substring(j));
+        }
+        System.out.println("Merged string: "+ms);
+    }
+}

@@ -1,0 +1,60 @@
+import java.util.*;
+abstract class Shape
+{
+    int a, b;
+    abstract double printArea();
+}
+
+class Rectangle extends Shape
+{
+    Rectangle(int length, int breadth)
+    {
+        this.a = length;
+        this.b = breadth;
+    }
+    double printArea()
+    {
+        double area = a * b;
+        System.out.println("Area of rectangle = " + area);
+        return area;
+    }
+}
+class Triangle extends Shape
+{
+    Triangle(int base, int height)
+    {
+        this.a = base;
+        this.b = height;
+    }
+    double printArea()
+    {
+        double area = 0.5 * a * b;
+        System.out.println("Area of triangle = " + area);
+        return area;
+    }
+}
+class Circle extends Shape
+{
+    Circle(int radius)
+    {
+        this.a = radius;
+    }
+    double printArea()
+    {
+        double area = Math.PI * a * a;
+        System.out.println("Area of circle = " + area);
+        return area;
+    }
+}
+class Main
+{
+    public static void main(String[] args)
+    {
+        Shape r = new Rectangle(7, 8);
+        Shape t = new Triangle(2, 3);
+        Shape c = new Circle(1);
+        r.printArea();
+        t.printArea();
+        c.printArea();
+    }
+}
